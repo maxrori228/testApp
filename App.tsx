@@ -1,51 +1,14 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
 
-import Home from "./app/screens/Home";
-import Folders from "./app/screens/Folders";
-import Calendar from "./app/screens/Calendar";
-import Profile from "./app/screens/Profile";
+import HomeStack from "./app/navigation/HomeStack";
+import FoldersStack from "./app/navigation/FoldersStack";
+import CalendarStack from "./app/navigation/CalendarStack";
+import ProfileStack from "./app/navigation/ProfileStack";
 
-// Stack Navigator
-const Stack = createNativeStackNavigator();
-
-function HomeStack() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="HomeMain" component={Home} />
-    </Stack.Navigator>
-  );
-}
-
-function FoldersStack() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="FoldersMain" component={Folders} />
-    </Stack.Navigator>
-  );
-}
-
-function CalendarStack() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="CalendarMain" component={Calendar} />
-    </Stack.Navigator>
-  );
-}
-
-function ProfileStack() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="ProfileMain" component={Profile} />
-    </Stack.Navigator>
-  );
-}
-
-// Bottom Tab
 const Tab = createBottomTabNavigator();
 
 export default function App() {
