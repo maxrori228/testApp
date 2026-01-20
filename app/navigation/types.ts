@@ -6,7 +6,11 @@ export type HomeStackParamList = {
 
 export type FoldersStackParamList = {
   FoldersMain: undefined;
-  FolderDetails: { id: string };
+  FolderDetails: {
+    id: string;
+    title: string;
+    description: string;
+  };
 };
 
 export type CalendarStackParamList = {
